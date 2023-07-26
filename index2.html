@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {text-align: center; border: 1000% solid black; border-collapse: collapse; justify-content: center;}
+        body {align-items: center; text-align: center; background-image: url(spidermanlogo.jpg); background-repeat: inherit; background-position: center; background-size: 100%;}
+        video {align-items: center; justify-content: center; margin-left: 5px; margin-right: 5px;margin-top: -20px;}
+        /*lagu*/
+        audio {display: hide;}
+        /*tombol*/
+        button:hover{background-color: white; border: 1px solid black; color: black;}
+        .quit-button {top: 69px;}
+        /*marquee*/
+        .ikan-berjalan {background-color: rgba(0, 0, 0, 0.56); color: rgb(255, 255, 255);}
+        /*piket*/
+        #piket div {margin-left: auto; margin-right: auto; width: 130px; height: auto; background-color: rgba(255, 0, 0, 0.248); border: 1.5px solid black; display: inline-table; color: white; border-color: white;}
+        #piket div p {text-align: center; text-decoration: underline; } 
+        #piket div ul li {text-align: left; }
+        .piket {color: white; border-color:  white;}
+        /*jadwal*/
+        .hari {background-color: rgba(255, 0, 0, 0.291); color: white;}
+        .jadwal {align-items: center; margin-left: 40%; margin-right: 40%; color:white; border-color: white;}
+        .ingat {background-color: rgba(255, 0, 0, 0.206); color:white;}
+        .daftar {display: none;}
+        /*foto*/
+        .foto {align-items: center; margin-left: 25%; margin-right: 25%; border: 1px solid black; border-color: white; display: inline-block;}
+        .foto div {display: inline-block;}
+        /*video*/
+        .video {align-items: center; margin-left: 1px; margin-right: 10px; border-color: white;}
+        .video div {background-color: rgba(255, 0, 0, 0.247); border: 2px solid black; width: 340px; height: 240px; display: inline-block; border-color: white; margin-left: 10px; margin-right: 10px;}
+        /*daftar siswa*/
+        .member {background-color: rgba(255, 0, 0, 0.363); color: white}
+        .jadwal-piket {align-items: center; margin-left: 40%; background-color: rgba(255, 0, 0, 0.363); border-color: white; color: white}
+        /*tombol*/
+        .quit-button {background-color: rgba(255, 0, 0, 0.363); color: white; border-color: white;}
+        /* ---- hp ---- */
+        @media screen and (max-width: 768px){
+            body {text-align: center; border: 500% solid black; border-collapse: collapse; justify-content: center; background-repeat: initial;}
+            table {text-align: center; border: 1000% solid black; border-collapse: collapse; justify-content: center; display: inline-block;}
+            /*marquee*/
+            .ikan-berjalan {background-color: rgba(0, 0, 0, 0.56); color: rgb(255, 255, 255); width: auto;}
+            /*lagu*/
+            audio { width: 160px; height: 120px; color: rgba(255, 0, 0, 0.313)}
+            /*video hp*/
+            video {align-items: center; justify-content: center; margin-left: 5px; margin-right: 5px;margin-top: -10px; width: 160px; height: 120px;}
+            .video {align-items: center; margin-left: 5%; margin-right: 10%;}
+            .video div {background-color: rgba(255, 0, 0, 0.247); border: 2px solid black; width: 180px; height: 120px; display: inline; border-color: white; margin-left: 10px; margin-right: 10px;}
+            /*jadwal hp*/
+            .jadwal {align-items: center; margin-left: 60px; margin-right: 40px; color:white; border-color: white; justify-content: center;}
+            /*tombol*/
+            .quit-button {background-color: rgba(255, 0, 0, 0.363); color: white; border-color: white; top: 69px;}
+            /*daftar siswa*/
+            .member {background-color: rgba(255, 0, 0, 0.363); color: white}
+            .jadwal-piket {align-items: center; margin-left: 20px; margin-right: 5px; background-color: rgba(255, 0, 0, 0.363); border-color: white; color: white; display: inline-block;}
+            /*foto*/
+            .foto {margin-left: -45px; margin-right: 5px;}
+            img {align-items: center; justify-content: center; width: 160px; height: 120px;}
+            .foto div {background-color: rgba(255, 0, 0, 0.247); border: 1px solid black; width: 180px; height: 120px; display: inline-block; border-color: white; margin-left: 10px; margin-right: 10px;}
+            /*piket*/
+            #piket div {margin-left: auto; margin-right: auto; width: 130px; height: auto; background-color: rgba(255, 0, 0, 0.248); border: 1.5px solid black; color: white; border-color: white; display:grid;}
+            #piket div p {text-align: center; text-decoration: underline; } 
+            #piket div ul li {text-align: left; }
+        }
+        /* ---- tablet ---- */
+        @media screen and (max-width: 1203px) {
+            body {text-align: center; border: 500% solid black; border-collapse: collapse; justify-content: center; background-repeat: initial;}
+            /*marquee*/
+            .ikan-berjalan {background-color: rgba(0, 0, 0, 0.56); color: rgb(255, 255, 255); width: auto;}
+            /*lagu*/
+            audio { width: 160px; height: 120px; color: rgba(255, 0, 0, 0.313)}
+            /*video hp*/
+            video {align-items: center; justify-content: center; margin-left: 5px; margin-right: 5px;margin-top: -10px; width: 160px; height: 120px;}
+            .video {align-items: center; margin-left: 5%; margin-right: 10%;}
+            .video div {background-color: rgba(255, 0, 0, 0.247); border: 2px solid black; width: 180px; height: 120px; display: inline-block; border-color: white; margin-left: 10px; margin-right: 10px;}
+            /*foto*/
+            .foto {margin-left: -45px; margin-right: 5px;}
+            img {align-items: center; justify-content: center; width: 160px; height: 120px;}
+            .foto div {background-color: rgba(255, 0, 0, 0.247); border: 1px solid black; width: 180px; height: 120px; display: inline-block; border-color: white; margin-left: 10px; margin-right: 10px;}
+            /*piket*/
+            #piket div {margin-left: auto; margin-right: auto; width: 130px; height: auto; background-color: rgba(255, 0, 0, 0.248); border: 1.5px solid black; color: white; border-color: white; display:grid;}
+            #piket div p {text-align: center; text-decoration: underline; } 
+            #piket div ul li {text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <h6 class="judul">TUGAS INDVIDU</h6>
+    <h1 class="tajuk">KEGIATAN CHUAKZ TIM</h1>
+    <div class="ikan-berjalan">
+        <marquee behavior="scroll" direction="left" scrollmount="6">Chuakz Rajin,Chuakz Baik,Chuakz Hebat, Chuakz Nyuakz, Chuakz Cerdas, Subscribe Wild_AN_Azhar</marquee>
+    </div>
+    <audio controls autoplay>
+        <source src="self-love.mp3" type="audio/mp3">
+    </audio>
+<!-- tombol-->
+<div>
+        <button onclick="showDaftar()">Tampilkan Daftar</button>      
+    <br>
+    <div class="daftar" id="daftarDiv">
+        <button onclick="quitDaftar()" class="quit-button">X</button>    
+        <!-- Mapel -->
+        <table border="2" cellspacing="5" cellpading="1000" class="jadwal">
+            <tr class="hari">
+                <td colspan="11" class="ingat">INI JADWAL</td>
+            </tr>  
+            <tr class="grey">
+                <td><b>HARI</b></td>                           
+                <td><b>1</b></td>
+                <td><b>2</b></td>
+                <td><b>3</b></td>
+                <td><b>4</b></td>
+                <td><b>5</b></td>                           
+                <td><b>6</b></td>                           
+                <td><b>7</b></td>                           
+                <td><b>8</b></td>                           
+                <td><b>9</b></td>                           
+                <td><b>10</b></td>                
+            </tr>
+            <tr>
+                <td><b>Senin</b></td>
+                <td colspan="6">KRPL</td>
+                <td>BJW</td>
+                <td colspan="3">BIN</td>
+            </tr>
+            <tr>
+                <td><b>Selasa</b></td>
+                <td colspan="6">KRPL</td>
+                <td colspan="4">RBT</td>
+            </tr>
+            <tr>
+                <td><b>Rabu</b></td>
+                <td colspan="2">SJR</td>
+                <td colspan="4">BNG</td>
+                <td colspan="2">POR</td>
+                <td colspan="2">PPS</td>
+            </tr>
+            <tr>
+                <td><b>Kamis</b></td>
+                <td colspan="6">KRPL</td>
+                <td colspan="3">MTK</td>
+                <td colspan="1">BJW</td>
+            </tr>
+            <tr>
+                <td><b>Jum'at</b></td>
+                <td colspan="3">PAG</td>
+                <td colspan="5">PKK</td>
+                <td colspan="2"></td>
+            </tr>
+        </table>
+</div>
+        <!-- piket -->
+        <div id="piket" class="piket">
+            <h3>JADWAL PIKET</h3>
+            <div class="sama">
+                <p>Senin</p>
+                <ul type="square">
+                    <li>Yahya</li>
+                    <li>Ara</li>
+                    <li>Aziz</li>
+                    <li>Danis</li>
+                    <li>Dinda</li>
+                    <li>Dirada</li>
+                    <li>Reno</li>
+                </ul>
+            </div>
+            <div class="sama">
+                <p>Selasa</p>
+                <ul type="square">
+                    <li><b>Wildan</b></li>
+                    <li>Aji</li>
+                    <li>Radit</li>
+                    <li>Rayhan</li>
+                    <li>Naja</li>
+                    <li>Vania</li>
+                    <li>Rizka</li>
+                </ul>
+            </div>
+            <div class="sama">
+                <p>Rabu</p>
+                <ul type="square">
+                    <li>Satura</li>
+                    <li>Umar</li>
+                    <li>Sean</li>
+                    <li>Nabil</li>
+                    <li>Nayla</li>
+                    <li>Nadifa</li>
+                    <li>Sabrina</li>
+                </ul>
+            </div>
+            <div class="kamis">
+                <p>Kamis</p>
+                <ul type="square">
+                    <li>Ata</li>
+                    <li>Najib</li>
+                    <li>Najwa</li>
+                    <li>Yoga</li>
+                    <li>Rizal</li>
+                    <li>Rafa</li>
+                    <li>Andhika</li>
+                </ul>
+            </div>
+            <div class="jum'at">
+                <p>Jum'at</p>
+                <ul type="square">
+                    <li>Zachdan</li>
+                    <li>Jhesaya</li>
+                    <li>Pasya</li>
+                    <li>Helga</li>
+                    <li>Anin</li>
+                    <li>Iryad</li>
+                    <li>Ridho</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <table border="2" cellpading="1" cellspacing="5" class="jadwal-piket">
+                <tr>
+                    <td colspan="5" class="member"><b>member</b></td>
+                </tr>
+                <tr>
+                    <td><b>Yahya</b></td>
+                    <td><b>Wildan</b></td>
+                    <td><b>Satura</b></td>
+                    <td><b>Ata</b></td>
+                    <td><b>Zachdan</b></td>
+                </tr>
+                <tr /baris2>
+                    <td><b>Ara</b></td>
+                    <td><b>Aji</b></td>
+                    <td><b>Umar</b></td>
+                    <td><b>Najib</b></td>
+                    <td><b>Jheje</b></td>
+                </tr>
+                <tr /baris3>
+                    <td><b>Aziz</b></td>
+                    <td><b>Radit</b></td>
+                    <td><b>Sean</b></td>
+                    <td><b>Najwa</b></td>
+                    <td><b>Pasya</b></td>
+                </tr>
+                <tr /baris4>
+                    <td><b>Danis</b></td>
+                    <td><b>Rayhan</b></td>
+                    <td><b>Nabil</b></td>
+                    <td><b>Yoga</b></td>
+                    <td><b>Helga</b></td>
+                </tr>
+                <tr /baris5>
+                    <td><b>Dinda</b></td>
+                    <td><b>Naja</b></td>
+                    <td><b>Nayla</b></td>
+                    <td><b>Rizal</b></td>
+                    <td><b>Anin</b></td>
+                </tr>
+                <tr /baris6>
+                    <td><b>Dirada</b></td>
+                    <td><b>Vania</b></td>
+                    <td><b>Nadhifa</b></td>
+                    <td><b>Rizka</b></td>
+                    <td><b>Irsyad</b></td>
+                </tr>
+                <tr /baris7>
+                    <td><b>Leonard</b></td>
+                    <td><b>Rizka</b></td>
+                    <td><b>Sabrina</b></td>
+                    <td><b>Andhika</b></td>
+                    <td><b>Ridho</b></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+    <!-- foto-->
+    <div class="foto">
+        <div>
+            <img width="320" height="240" src="WhatsApp Image 2023-07-21 at 11.12.19.jpeg">
+        </div>
+        <div>
+            <img width="320" height="240" src="C:\Users\pc1vt\Downloads\coba koding\jobsheet kelas 11\kegiatan Chuakz kuat\WhatsApp Image 2023-07-21 at 11.12.19 (1).jpeg">
+        </div>
+    </div>
+<!--video-->
+<div class="video">
+    <div>
+        <video width="320" height="240" controls>
+        <source src="C:\Users\pc1vt\Downloads\coba koding\jobsheet kelas 11\kegiatan Chuakz kuat\WhatsApp Video 2023-07-21 at 11.12.19 (1).mp4" type="video/mp4">
+        Maaf, browser Anda tidak mendukung pemutaran video.</video>            
+    </div>
+    <div>
+        <video width="320" height="240" controls>
+        <source src="C:\Users\pc1vt\Downloads\coba koding\jobsheet kelas 11\kegiatan Chuakz kuat\WhatsApp Video 2023-07-21 at 11.12.19.mp4" type="video/mp4">
+        Maaf, browser Anda tidak mendukung pemutaran video.</video>
+    </div>
+</div>
+</div>
+        <script>
+            function showDaftar() {var div = document.getElementById("daftarDiv"); div.style.display = "block"; }
+            function quitDaftar() {var div = document.getElementById("daftarDiv");div.style.display = "none";}
+        </script>
+</body>
+</html>
